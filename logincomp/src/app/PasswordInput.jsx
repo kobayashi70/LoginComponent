@@ -1,7 +1,6 @@
 import { useState } from "react";
 
-const PasswordInput = () => {
-  const [password, setPassword] = useState("");
+const PasswordInput = ({ value, onChange }) => {
   const [showPassword, setShowPassword] = useState(false);
 
   const togglePasswordVisibility = () => {
@@ -27,8 +26,8 @@ const PasswordInput = () => {
           type={showPassword ? "text" : "password"}
           className="grow"
           placeholder="password"
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
+          value={value}
+          onChange={onChange}
         />
         <button type="button" onClick={togglePasswordVisibility} className="">
           {showPassword ? (

@@ -1,7 +1,4 @@
-import { useState } from "react";
-
-const UsernameInput = () => {
-  const [username, setUsername] = useState("");
+const UsernameInput = ({ value, onChange }) => {
   return (
     <div className="flex justify-center">
       <label className="input input-bordered flex items-center gap-2 w-full">
@@ -17,8 +14,9 @@ const UsernameInput = () => {
           type="text"
           className="grow"
           placeholder="username"
-          value={username}
-          onChange={(e) => setUsername(e.target.value)}
+          value={value}
+          onChange={onChange}
+          required
         />
       </label>
     </div>

@@ -1,11 +1,11 @@
 import LoginButton from "./LoginButton";
 import RegisterButton from "./RegisterButton";
 
-const ButtonGroup = () => {
+const ButtonGroup = ({ handleRegister, handleLogin }) => {
   return (
     <div className="w-72 flex justify-around">
-      <RegisterButton />
-      <LoginButton />
+      <RegisterButton onClick={handleRegister} />
+      <LoginButton onClick={handleLogin} />
     </div>
   );
 };

@@ -1,7 +1,9 @@
-const LoginButton = () => {
+const LoginButton = ({ onClick }) => {
   return (
     <div>
-      <button className="btn btn-outline w-20">login</button>
+      <button className="btn btn-outline w-20" onClick={onClick}>
+        login
+      </button>
     </div>
   );
 };

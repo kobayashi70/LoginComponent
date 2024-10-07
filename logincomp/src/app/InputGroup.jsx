@@ -3,11 +3,17 @@
 const { default: PasswordInput } = require("./PasswordInput");
 const { default: UsernameInput } = require("./usernameInput");
 
-const InputGroup = () => {
+const InputGroup = ({ username, setUsername, password, setPassword }) => {
   return (
     <div className="flex flex-col gap-4">
-      <UsernameInput />
-      <PasswordInput />
+      <UsernameInput
+        value={username}
+        onChange={(e) => setUsername(e.target.value)}
+      />
+      <PasswordInput
+        value={password}
+        onChange={(e) => setPassword(e.target.value)}
+      />
     </div>
   );
 };
